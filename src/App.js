@@ -13,13 +13,13 @@ class App extends React.Component {
 
   render() {
     return (
-    <div>
-      <span className="header">
+    <div className="app">
+      <span className="display">
         <h1>You Can Do This!</h1>
-      </span>
-      <span className="response">
+      
         <img onClick={this.clickHandler} src={this.state.clicked ? yes["yes-image"] : no["no-image"]} alt={this.state.clicked ? 'yes-image' : 'no-image'} />
-        {this.state.clicked ? (<h1>{yes["yes-statement"]}</h1>) : (<h1>{no["no-statement"]}</h1>)}
+
+        {this.state.clicked ? (<h1 className="display">{yes["yes-statement"]}</h1>) : (<h1 className="display">{no["no-statement"]}</h1>)}
       </span>
     </div>
     )
